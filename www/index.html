@@ -100,7 +100,7 @@
 							break;
 						}
 					}
-					for(var a=x+1;a<=10;a++){
+					for(var a=x+1;a<=cols-1;a++){
 						if(g_qipan[y][a].style.background==newColor){
 							num1++;
 						}else{
@@ -127,7 +127,7 @@
 							break;
 						}
 					}
-					for(var a=y+1;a<=10;a++){
+					for(var a=y+1;a<=rows-1;a++){
 						if(g_qipan[a][x].style.background==newColor){
 							num2++;
 						}else{
@@ -154,7 +154,7 @@
 							break;
 						}
 					}
-					for(var a=y+1,b=x+1;a<=10&&b<=10;a++,b++){
+					for(var a=y+1,b=x+1;a<=rows-1&&b<=cols-1;a++,b++){
 						if(g_qipan[a][b].style.background==newColor){
 							num3++;
 						}else{
@@ -169,7 +169,7 @@
 					
 					//右倾斜
 					var num4=0;
-					for(var a=y,b=x;a>=0&&b<=10;a--,b++){
+					for(var a=y,b=x;a>=0&&b<=cols-1;a--,b++){
 						if(g_qipan[a][b].style.background==newColor){
 							num4++;
 						}else{
@@ -181,7 +181,7 @@
 							break;
 						}
 					}
-					for(var a=y+1,b=x-1;a<=10&&b>=0;a++,b--){
+					for(var a=y+1,b=x-1;a<=rows-1&&b>=0;a++,b--){
 						if(g_qipan[a][b].style.background==newColor){
 							num4++;
 						}else{
